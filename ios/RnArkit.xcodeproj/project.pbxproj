@@ -38,6 +38,10 @@
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		F323758721F2AF63009D3867 /* libRCTARKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F323755B21F2AE92009D3867 /* libRCTARKit.a */; };
+		F323758821F2AF70009D3867 /* PocketSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F323758421F2AEB8009D3867 /* PocketSVG.framework */; };
+		F323758921F2AF94009D3867 /* PocketSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F323758421F2AEB8009D3867 /* PocketSVG.framework */; };
+		F323758A21F2AF94009D3867 /* PocketSVG.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F323758421F2AEB8009D3867 /* PocketSVG.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -314,7 +318,49 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
+		F323755A21F2AE92009D3867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F323755321F2AE92009D3867 /* RCTARKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTARKit;
+		};
+		F323758321F2AEB8009D3867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F323757E21F2AEB8009D3867 /* PocketSVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C79800BB1A21CB5300380860;
+			remoteInfo = "PocketSVG (iOS)";
+		};
+		F323758521F2AEB8009D3867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F323757E21F2AEB8009D3867 /* PocketSVG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C79800F51A21CDFD00380860;
+			remoteInfo = "PocketSVG (Mac)";
+		};
+		F323758B21F2AF94009D3867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F323757E21F2AEB8009D3867 /* PocketSVG.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C79800BA1A21CB5300380860;
+			remoteInfo = "PocketSVG (iOS)";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F323758D21F2AF94009D3867 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F323758A21F2AF94009D3867 /* PocketSVG.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
@@ -343,6 +389,8 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		F323755321F2AE92009D3867 /* RCTARKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTARKit.xcodeproj; path = "../node_modules/react-native-arkit/ios/RCTARKit.xcodeproj"; sourceTree = "<group>"; };
+		F323757E21F2AEB8009D3867 /* PocketSVG.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PocketSVG.xcodeproj; path = "../node_modules/react-native-arkit/ios/PocketSVG/PocketSVG.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +406,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F323758821F2AF70009D3867 /* PocketSVG.framework in Frameworks */,
+				F323758721F2AF63009D3867 /* libRCTARKit.a in Frameworks */,
+				F323758921F2AF94009D3867 /* PocketSVG.framework in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -544,6 +595,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				F323757E21F2AEB8009D3867 /* PocketSVG.xcodeproj */,
+				F323755321F2AE92009D3867 /* RCTARKit.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -603,6 +656,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F323755421F2AE92009D3867 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F323755B21F2AE92009D3867 /* libRCTARKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F323757F21F2AEB8009D3867 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F323758421F2AEB8009D3867 /* PocketSVG.framework */,
+				F323758621F2AEB8009D3867 /* PocketSVG.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -632,10 +702,12 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				F323758D21F2AF94009D3867 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F323758C21F2AF94009D3867 /* PBXTargetDependency */,
 			);
 			name = RnArkit;
 			productName = "Hello World";
@@ -715,12 +787,20 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = F323757F21F2AEB8009D3867 /* Products */;
+					ProjectRef = F323757E21F2AEB8009D3867 /* PocketSVG.xcodeproj */;
+				},
+				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
 				},
 				{
 					ProductGroup = 5E91572E1DD0AC6500FF2AA8 /* Products */;
 					ProjectRef = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
+				},
+				{
+					ProductGroup = F323755421F2AE92009D3867 /* Products */;
+					ProjectRef = F323755321F2AE92009D3867 /* RCTARKit.xcodeproj */;
 				},
 				{
 					ProductGroup = ADBDB9201DFEBF0600ED6528 /* Products */;
@@ -1033,6 +1113,27 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F323755B21F2AE92009D3867 /* libRCTARKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTARKit.a;
+			remoteRef = F323755A21F2AE92009D3867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F323758421F2AEB8009D3867 /* PocketSVG.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PocketSVG.framework;
+			remoteRef = F323758321F2AEB8009D3867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F323758621F2AEB8009D3867 /* PocketSVG.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PocketSVG.framework;
+			remoteRef = F323758521F2AEB8009D3867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1147,6 +1248,11 @@
 			isa = PBXTargetDependency;
 			target = 2D02E47A1E0B4A5D006451C7 /* RnArkit-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
+		};
+		F323758C21F2AF94009D3867 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PocketSVG (iOS)";
+			targetProxy = F323758B21F2AF94009D3867 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
