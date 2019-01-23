@@ -40,7 +40,11 @@ export default class App extends Component<Props> {
         position={position}
         shape={{ width: 0.1, height: 0.1 }}
         material={{
-          diffuse: { path: 'assets/octocat', intensity: 1 }
+          // diffuse: { path: 'assets/octocat', intensity: 1 }
+          diffuse: {
+            path: 'https://avatars0.githubusercontent.com/u/583231?s=460&v=4',
+            intensity: 1
+          }
         }}
       />
     );
