@@ -7,7 +7,7 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View, Button } from 'react-native';
 import { ARKit } from 'react-native-arkit';
 
 const instructions = Platform.select({
@@ -90,6 +90,7 @@ export default class App extends Component<Props> {
             }}
           />
         </ARKit>
+        <Button onPress={() => console.log('shutter pressed')} title="Shutter" color="#841584" />
       </View>
     );
   }
