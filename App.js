@@ -34,6 +34,17 @@ export default class App extends Component<Props> {
       cameraZ: pos.z
     });
   };
+  renderOctocat = position => {
+    return (
+      <ARKit.Plane
+        position={position}
+        shape={{ width: 0.1, height: 0.1 }}
+        material={{
+          diffuse: { path: 'assets/octocat', intensity: 1 }
+        }}
+      />
+    );
+  };
   render() {
     const { cameraZ } = this.state;
     console.info('this.state', this.state);
@@ -67,52 +78,23 @@ export default class App extends Component<Props> {
           // detectionImages={[{ resourceGroupName: 'DetectionImages' }]}
           onARKitError={console.log} // if arkit could not be initialized (e.g. missing permissions), you will get notified here
         >
-          <ARKit.Box
-            position={{ x: 0, y: 0, z: zPosition }}
-            shape={{ width: 0.1, height: 0.1, length: 0.1, chamfer: 0.01 }}
-          />
-          <ARKit.Sphere position={{ x: 0.2, y: 0, z: zPosition }} shape={{ radius: 0.05 }} />
-          <ARKit.Cylinder
-            position={{ x: 0.4, y: 0, z: zPosition }}
-            shape={{ radius: 0.05, height: 0.1 }}
-          />
-          <ARKit.Cone
-            position={{ x: 0, y: 0.2, z: zPosition }}
-            shape={{ topR: 0, bottomR: 0.05, height: 0.1 }}
-          />
-          <ARKit.Plane
-            eulerAngles={{ x: Math.PI / 2 }}
-            position={{ x: 0.2, y: 0.15, z: zPosition }}
-            shape={{ width: 0.1, height: 0.1 }}
-          />
-          <ARKit.Tube
-            position={{ x: 0.4, y: 0.2, z: zPosition }}
-            shape={{ innerR: 0.03, outerR: 0.05, height: 0.1 }}
-          />
-          <ARKit.Torus
-            position={{ x: 0, y: 0.4, z: zPosition }}
-            shape={{ ringR: 0.06, pipeR: 0.02 }}
-          />
-          <ARKit.Capsule
-            position={{ x: 0.2, y: 0.4, z: zPosition }}
-            shape={{ capR: 0.02, height: 0.06 }}
-          />
-          <ARKit.Plane
-            position={{ x: 0.4, y: 0.4, z: zPosition }}
-            shape={{ width: 0.1, height: 0.1 }}
-          />
+          {this.renderOctocat({ x: 0, y: 0, z: zPosition })}
+          {this.renderOctocat({ x: 0.2, y: 0, z: zPosition })}
+          {this.renderOctocat({ x: 0.4, y: 0, z: zPosition })}
+          {this.renderOctocat({ x: 0, y: 0.2, z: zPosition })}
+          {this.renderOctocat({ x: 0.2, y: 0.2, z: zPosition })}
+          {this.renderOctocat({ x: 0.4, y: 0.2, z: zPosition })}
+          {this.renderOctocat({ x: 0, y: 0.4, z: zPosition })}
+          {this.renderOctocat({ x: 0.2, y: 0.4, z: zPosition })}
+          {this.renderOctocat({ x: 0.4, y: 0.4, z: zPosition })}
           <ARKit.Text
             text="ARKit is Cool!"
             position={{ x: 0.2, y: 0.6, z: zPosition }}
             font={{ size: 0.15, depth: 0.05 }}
           />
+          <ARKit.Light position={{ x: 1, y: 3, z: 2 }} type={ARKit.LightType.Omni} color="white" />
           <ARKit.Light
-            position={{ x: 1, y: 3, z: zPosition }}
-            type={ARKit.LightType.Omni}
-            color="white"
-          />
-          <ARKit.Light
-            position={{ x: 0, y: 1, z: zPosition }}
+            position={{ x: 0, y: 1, z: 0 }}
             type={ARKit.LightType.Spot}
             eulerAngles={{ x: -Math.PI / 2 }}
             spotInnerAngle={45}
